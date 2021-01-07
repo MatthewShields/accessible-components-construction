@@ -1,0 +1,51 @@
+.slider{
+  &__wrapper{
+    overflow: hidden;
+  }
+
+  &__action {
+    &[aria-hidden="true"] {
+      display: none;
+    }
+  }
+
+  &__panels {
+    white-space: nowrap;
+    transition: transform 2s ease-in-out, max-height 0.5s ease-in-out;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  &__panel {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    white-space: initial;
+    outline: 0;
+    background: no-repeat center center;
+    background-size: cover;
+
+    // &[hidden="true"] {
+    //   display: none;
+    // }
+
+    &:focus {
+      // border: 10px red solid;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__controls {
+    margin: 0 0 1.5rem;
+  }
+
+  &__nav {
+    margin: 1.5rem 0;
+  }
+}
